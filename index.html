@@ -1,12 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+    .text-glow {
+      text-shadow: 0 0 10px rgba(250, 204, 21, 0.3);
+    }
+  </style>
 </head>
-<body>
-    <h1>brahim medkour</h1>
-    <h2>devlopeur web</h2>
+
+<body class="bg-slate-950 text-slate-100 min-h-screen relative overflow-x-hidden selection:bg-yellow-400 selection:text-black">
+
+  <!-- Background Decorative Elements -->
+  <div class="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden">
+    <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-yellow-500/5 blur-[120px] rounded-full"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-yellow-600/5 blur-[120px] rounded-full"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(253,224,71,0.03)_0%,transparent_70%)]"></div>
+  </div>
+
+  <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50
+              backdrop-blur-2xl bg-white/5 border border-white/5 
+              rounded-full px-16 py-2.5 shadow-2xl">
+
+    <ul id="nav" class="flex items-center gap-10 text-slate-300 text-sm font-medium relative">
+      <li class="nav-item px-2 py-1 cursor-pointer hover:text-yellow-400 transition-all duration-300">Home</li>
+      <li class="nav-item px-2 py-1 cursor-pointer hover:text-yellow-400 transition-all duration-300">About</li>
+      <li class="nav-item px-2 py-1 cursor-pointer hover:text-yellow-400 transition-all duration-300">Skills</li>
+      <li class="nav-item px-2 py-1 cursor-pointer hover:text-yellow-400 transition-all duration-300">Projects</li>
+      <li class="nav-item px-2 py-1 cursor-pointer hover:text-yellow-400 transition-all duration-300">Contact</li>
+    </ul>
+
+  </nav>
+
+  <!-- Hero Section -->
+  <main class="flex flex-col items-center justify-center min-h-screen px-6 pt-20">
+    <div class="text-center animate-float">
+      <h2 class="text-yellow-200/80 font-semibold tracking-widest uppercase text-xs mb-4">Welcome to my world</h2>
+      <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
+        Hello, I'm <span class="bg-gradient-to-r from-yellow-200 to-yellow-400 bg-clip-text text-transparent opacity-90">Zakaria</span>
+      </h1>
+      <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed font-light">
+        A passionate <span class="text-slate-200 font-medium">Full Stack Developer</span> crafting high-performance, visually stunning digital experiences with modern web technologies.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button class="px-8 py-3 bg-yellow-300/90 hover:bg-yellow-300 text-slate-900 font-bold rounded-full transition-all duration-300 shadow-[0_0_15px_rgba(253,224,71,0.2)] hover:shadow-[0_0_25px_rgba(253,224,71,0.3)] transform hover:-translate-y-1">
+          View My Work
+        </button>
+        <button class="px-8 py-3 bg-transparent border border-white/10 hover:border-yellow-200/30 text-slate-300 hover:text-white font-medium rounded-full transition-all duration-300 backdrop-blur-sm">
+          Contact Me
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 px-6 max-w-5xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div class="relative">
+        <div class="aspect-square rounded-2xl bg-gradient-to-br from-yellow-200/20 to-transparent border border-white/10 overflow-hidden relative group">
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(253,224,71,0.1)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          <!-- Placeholder for Profile Image -->
+          <div class="w-full h-full flex items-center justify-center text-slate-500 italic">
+            [ Profile Image ]
+          </div>
+        </div>
+        <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-yellow-400/10 blur-2xl rounded-full"></div>
+      </div>
+
+      <div>
+        <h3 class="text-yellow-200/80 font-semibold uppercase text-xs tracking-widest mb-4">Discovery</h3>
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
+        <p class="text-slate-400 leading-relaxed mb-6 font-light">
+          I am a developer who loves turning complex problems into simple, beautiful, and intuitive designs. With a background in full-stack development, I focus on writing clean, elegant code and creating seamless user experiences.
+        </p>
+        <p class="text-slate-400 leading-relaxed font-light">
+          When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, or refining my design skills.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-24 px-6 max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <h3 class="text-yellow-200/80 font-semibold uppercase text-xs tracking-widest mb-4">Expertise</h3>
+      <h2 class="text-3xl md:text-4xl font-bold">Technical Skills</h2>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <!-- Skill Cards -->
+      <div class="p-8 rounded-2xl bg-white/5 border border-white/5 hover:border-yellow-200/20 transition-all duration-300 group text-center">
+        <div class="w-12 h-12 bg-yellow-200/10 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 text-yellow-200">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+        </div>
+        <h4 class="font-semibold text-slate-200">Frontend</h4>
+        <p class="text-xs text-slate-500 mt-2">React, Tailwind, Vue</p>
+      </div>
+
+      <div class="p-8 rounded-2xl bg-white/5 border border-white/5 hover:border-yellow-200/20 transition-all duration-300 group text-center">
+        <div class="w-12 h-12 bg-yellow-200/10 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 text-yellow-200">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14M5 12l4-4m-4 4l4 4"></path></svg>
+        </div>
+        <h4 class="font-semibold text-slate-200">Backend</h4>
+        <p class="text-xs text-slate-500 mt-2">Node.js, Python, Go</p>
+      </div>
+
+      <div class="p-8 rounded-2xl bg-white/5 border border-white/5 hover:border-yellow-200/20 transition-all duration-300 group text-center">
+        <div class="w-12 h-12 bg-yellow-200/10 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 text-yellow-200">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
+        </div>
+        <h4 class="font-semibold text-slate-200">Database</h4>
+        <p class="text-xs text-slate-500 mt-2">Postgres, MongoDB</p>
+      </div>
+
+      <div class="p-8 rounded-2xl bg-white/5 border border-white/5 hover:border-yellow-200/20 transition-all duration-300 group text-center">
+        <div class="w-12 h-12 bg-yellow-200/10 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 text-yellow-200">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+        </div>
+        <h4 class="font-semibold text-slate-200">Security</h4>
+        <p class="text-xs text-slate-500 mt-2">Auth, Encryption</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const items = document.querySelectorAll('.nav-item');
+    const indicator = document.getElementById('bg-indicator');
+
+    function move(el) {
+      indicator.style.width = el.offsetWidth + 'px';
+      indicator.style.height = el.offsetHeight + 'px';
+      indicator.style.left = el.offsetLeft + 'px';
+      indicator.style.top = el.offsetTop + 'px';
+    }
+
+    // Set Home as default
+    move(items[0]);
+
+    items.forEach(item => {
+      item.addEventListener('mouseenter', () => move(item));
+      item.addEventListener('click', () => {
+        // Change text color logic could go here
+        move(item);
+      });
+    });
+
+    // Reset indicator to current section if mouse leaves navbar (optional)
+    // For now, it stays on the last hovered item which is standard for this design
+  </script>
+
 </body>
 </html>
