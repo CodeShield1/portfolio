@@ -37,17 +37,17 @@
   </button>
 
   <!-- Hero Section -->
-  <main class="relative flex flex-col lg:flex-row items-center justify-between min-h-screen px-6 lg:px-24 pt-48 lg:pt-0 max-w-7xl mx-auto gap-12 lg:gap-16 mb-20 overflow-hidden">
+  <main class="relative flex flex-col lg:flex-row items-center justify-between min-h-screen px-6 lg:px-24 pt-48 lg:pt-0 max-w-7xl mx-auto overflow-x-hidden overflow-y-visible">
     
     <!-- Mobile Background Image (Only on Mobile) -->
     <div class="absolute inset-0 lg:hidden z-0 pointer-events-none opacity-20">
-        <img src="assets/brahim.png" alt="" class="w-full h-full object-cover object-top scale-110 blur-[2px]">
+        <img src="assets/brahim.png" alt="" class="absolute inset-0 w-full h-full object-cover object-top scale-110 blur-[2px] animate-cross-fade">
+        <img src="assets/brahim2.png" alt="" class="absolute inset-0 w-full h-full object-cover object-top scale-110 blur-[2px]">
         <div class="absolute inset-0 bg-gradient-to-b from-slate-950 via-transparent to-slate-950"></div>
     </div>
 
     <!-- Text Content -->
     <div class="relative flex-1 text-center lg:text-left z-10 order-1 lg:max-w-2xl">
-      
       
       <h2 class="text-slate-100 text-lg md:text-xl font-light mb-2">Hello, I'm</h2>
       <h1 class="text-4xl md:text-7xl font-bold mb-4 tracking-tight leading-tight">
@@ -74,32 +74,42 @@
 
     <!-- Desktop Image Container (Right side) -->
     <div class="hidden lg:block flex-1 relative mt-20 lg:mt-0 tilt-container order-2">
-      <div id="hero-card" class="relative w-full aspect-square max-w-[380px] ml-auto group transition-transform duration-200 ease-out">
+      <div id="hero-card" class="relative w-full aspect-square max-w-[400px] ml-auto group transition-transform duration-200 ease-out">
         
-        <!-- Decorative high-end frames -->
+        <!-- TECH HUD OVERLAY -->
+        <div class="absolute -top-4 -left-4 w-12 h-12 border-t-2 border-l-2 border-yellow-400/40 rounded-tl-xl z-30 transition-all duration-500 group-hover:-translate-x-2 group-hover:-translate-y-2"></div>
+        <div class="absolute -bottom-4 -right-4 w-12 h-12 border-b-2 border-r-2 border-yellow-400/40 rounded-br-xl z-30 transition-all duration-500 group-hover:translate-x-2 group-hover:translate-y-2"></div>
+
+        <!-- Pulse Status Indicator (Bottom Left) -->
+        <div class="absolute -bottom-10 -left-10 bg-slate-900/80 backdrop-blur-md border border-white/10 px-4 py-2 rounded-full shadow-xl z-30 flex items-center gap-3 [animation-delay:1s] animate-float">
+            <div class="relative w-2.5 h-2.5">
+                <div class="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-75"></div>
+                <div class="relative bg-green-500 w-2.5 h-2.5 rounded-full"></div>
+            </div>
+            <span class="text-[9px] text-white font-bold uppercase tracking-[0.2em]">System Active</span>
+        </div>
+
+        <!-- Decorative background frame -->
         <div class="absolute inset-0 border border-yellow-400/10 rounded-3xl translate-x-6 translate-y-6 group-hover:translate-x-4 group-hover:translate-y-4 transition-all duration-700"></div>
-        <div class="absolute -inset-4 bg-gradient-to-tr from-yellow-400/5 to-transparent rounded-[3rem] -z-10 blur-2xl"></div>
 
         <!-- Main Image Box -->
-        <div class="relative w-full h-full rounded-3xl overflow-hidden border border-white/5 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] bg-slate-950">
-          <img src="assets/brahim.png" alt="Ibrahim" class="w-full h-full object-cover object-top transition-all duration-1000 group-hover:scale-110 grayscale-[10%] group-hover:grayscale-0">
+        <div class="relative w-full h-full rounded-3xl overflow-hidden border border-white/10 shadow-[0_40px_80px_-15px_rgba(0,0,0,0.8)] bg-slate-950 z-10">
+          <!-- Alternating Images -->
+          <img src="assets/brahim.png" alt="Ibrahim" class="absolute inset-0 w-full h-full object-cover object-top transition-all duration-1000 group-hover:scale-110 grayscale-[5%] group-hover:grayscale-0 animate-cross-fade z-20">
+          <img src="assets/brahim2.png" alt="Ibrahim" class="absolute inset-0 w-full h-full object-cover object-top transition-all duration-1000 group-hover:scale-110 grayscale-[5%] group-hover:grayscale-0 z-10">
           
           <!-- Animated Scan Effect -->
-          <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-yellow-400/40 to-transparent animate-scan z-20"></div>
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80"></div>
+          <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-yellow-400/60 to-transparent animate-scan z-30"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90 z-20"></div>
           
           <!-- High-end Floating Badge -->
-          <div class="absolute bottom-6 left-6 right-6 bg-white/5 backdrop-blur-2xl border border-white/10 p-4 rounded-2xl shadow-2xl z-20 transform group-hover:-translate-y-2 transition-transform duration-500">
+          <div class="absolute bottom-6 left-6 right-6 bg-white/5 backdrop-blur-2xl border border-white/10 p-4 rounded-2xl shadow-2xl z-40 transform group-hover:-translate-y-2 transition-transform duration-500">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-3">
-                <div class="relative">
-                    <div class="w-2.5 h-2.5 bg-green-500 rounded-full"></div>
-                    <div class="absolute inset-0 w-2.5 h-2.5 bg-green-500 rounded-full animate-ping"></div>
-                </div>
-                <span class="text-[10px] text-white font-bold uppercase tracking-[0.2em] whitespace-nowrap">Active Now</span>
+                <span class="text-[10px] text-white font-bold uppercase tracking-[0.2em] whitespace-nowrap">Full Stack Dev</span>
               </div>
               <div class="h-4 w-[1px] bg-white/10"></div>
-              <span class="text-[10px] text-yellow-400 font-bold uppercase tracking-widest">Available</span>
+              <span class="text-[10px] text-yellow-400 font-bold uppercase tracking-widest">Verified</span>
             </div>
           </div>
         </div>

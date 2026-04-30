@@ -37,8 +37,32 @@
       animation: scan 4s linear infinite;
     }
 
+    @keyframes rotate-slow {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    .animate-rotate-slow {
+      animation: rotate-slow 20s linear infinite;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.5; scale: 1; }
+      50% { opacity: 0.8; scale: 1.1; }
+    }
+    .animate-pulse-glow {
+      animation: pulse-glow 4s ease-in-out infinite;
+    }
+
     .tilt-container {
       perspective: 1000px;
+    }
+
+    @keyframes cross-fade {
+      0%, 45% { opacity: 1; }
+      55%, 100% { opacity: 0; }
+    }
+    .animate-cross-fade {
+      animation: cross-fade 8s ease-in-out infinite alternate;
     }
 
     #hero-card {
