@@ -6,7 +6,6 @@
   <title>Professional Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.tailwindcss.com"></script>
-  
 </head>
 
 <body class="bg-slate-950 text-slate-100 min-h-screen relative overflow-x-hidden selection:bg-yellow-400 selection:text-black">
@@ -21,7 +20,6 @@
   <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50
               backdrop-blur-2xl bg-white/5 border border-yellow-400/50 
               rounded-full px-8 md:px-12 py-3 md:py-2.5 shadow-2xl flex items-center justify-center">
-
     <ul id="nav" class="flex items-center gap-6 md:gap-12 text-slate-300 text-[11px] md:text-sm font-medium relative">
       <li class="nav-item cursor-pointer hover:text-yellow-400 transition-all duration-300">Home</li>
       <li class="nav-item cursor-pointer hover:text-yellow-400 transition-all duration-300">About</li>
@@ -29,7 +27,6 @@
       <li class="nav-item cursor-pointer hover:text-yellow-400 transition-all duration-300">Projects</li>
       <li class="nav-item cursor-pointer hover:text-yellow-400 transition-all duration-300">Contact</li>
     </ul>
-
   </nav>
 
   <!-- Responsive Download CV Button -->
@@ -40,34 +37,36 @@
   </button>
 
   <!-- Hero Section -->
-  <main class="relative flex flex-col lg:flex-row items-center justify-between min-h-screen px-6 lg:px-24 pt-32 lg:pt-10 max-w-7xl mx-auto gap-8 lg:gap-12 mb-10 overflow-hidden">
+  <main class="relative flex flex-col lg:flex-row items-center justify-between min-h-screen px-6 lg:px-24 pt-48 lg:pt-0 max-w-7xl mx-auto gap-12 lg:gap-16 mb-20 overflow-hidden">
     
     <!-- Mobile Background Image (Only on Mobile) -->
-    <div class="absolute inset-0 lg:hidden z-0 pointer-events-none opacity-30">
-        <img src="assets/brahim.png" alt="" class="w-full h-full object-cover object-top">
+    <div class="absolute inset-0 lg:hidden z-0 pointer-events-none opacity-20">
+        <img src="assets/brahim.png" alt="" class="w-full h-full object-cover object-top scale-110 blur-[2px]">
         <div class="absolute inset-0 bg-gradient-to-b from-slate-950 via-transparent to-slate-950"></div>
     </div>
 
     <!-- Text Content -->
-    <div class="flex-1 text-center lg:text-left z-10 order-1">
-      <h2 class="text-slate-100 text-xl md:text-3xl font-light mb-2">Hello, I'm</h2>
-      <h1 class="text-5xl md:text-8xl font-bold mb-4 tracking-tight min-h-[1.2em]">
-        <span id="typing-name" class="text-yellow-400"></span><span class="cursor">|</span>
+    <div class="relative flex-1 text-center lg:text-left z-10 order-1 lg:max-w-2xl">
+      
+      
+      <h2 class="text-slate-100 text-lg md:text-xl font-light mb-2">Hello, I'm</h2>
+      <h1 class="text-4xl md:text-7xl font-bold mb-4 tracking-tight leading-tight">
+        <span id="typing-name" class="text-yellow-400"></span><span class="cursor text-yellow-400/50">|</span>
       </h1>
-      <h3 class="text-slate-100 text-lg md:text-2xl font-bold tracking-[0.2em] uppercase mb-8 opacity-80">Full Stack Developer</h3>
+      <h3 class="text-slate-400 text-base md:text-lg font-medium tracking-[0.3em] uppercase mb-10 opacity-80">Full Stack Developer</h3>
 
-      <div class="w-16 h-1 bg-yellow-400 mb-8 mx-auto lg:mx-0"></div>
+      <div class="w-12 h-0.5 bg-yellow-400/50 mb-10 mx-auto lg:mx-0"></div>
 
-      <p class="text-slate-400 text-base md:text-xl max-w-xl mb-10 leading-relaxed font-light mx-auto lg:mx-0">
-        I build fast, scalable, and user-friendly web applications using modern technologies. Turning ideas into digital experiences that make an impact.
+      <p class="text-slate-400 text-sm md:text-lg max-w-lg mb-12 leading-relaxed font-light mx-auto lg:mx-0">
+        I build fast, scalable, and user-friendly web applications using modern technologies. Turning ideas into <span class="text-slate-200 font-normal">impactful digital experiences</span>.
       </p>
 
-      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-        <button class="px-8 py-4 bg-yellow-400 hover:bg-yellow-500 text-slate-950 font-bold rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(253,224,71,0.2)] flex items-center justify-center gap-2 group">
-          View My Work
-          <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+      <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
+        <button class="px-8 py-3.5 bg-yellow-400 hover:bg-yellow-500 text-slate-950 text-sm font-bold rounded-full transition-all duration-300 shadow-[0_10px_30px_rgba(253,224,71,0.15)] flex items-center justify-center gap-2 group">
+          View Work
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
         </button>
-        <button class="px-8 py-4 bg-transparent border border-yellow-400/30 hover:border-yellow-400 text-yellow-400 font-bold rounded-xl transition-all duration-300 backdrop-blur-sm">
+        <button class="px-8 py-3.5 bg-white/5 border border-white/10 hover:border-yellow-400/50 text-white text-sm font-bold rounded-full transition-all duration-300 backdrop-blur-sm">
           Contact Me
         </button>
       </div>
@@ -75,27 +74,32 @@
 
     <!-- Desktop Image Container (Right side) -->
     <div class="hidden lg:block flex-1 relative mt-20 lg:mt-0 tilt-container order-2">
-      <div id="hero-card" class="relative w-full aspect-square max-w-[320px] md:max-w-[400px] mx-auto group transition-transform duration-200 ease-out">
-        <!-- Decorative frame behind image -->
-        <div class="absolute inset-0 border-2 border-yellow-400/20 rounded-3xl translate-x-4 translate-y-4 group-hover:translate-x-6 group-hover:translate-y-6 transition-all duration-500"></div>
-        <div class="absolute inset-0 bg-gradient-to-tr from-yellow-400/10 to-transparent rounded-3xl -translate-x-4 -translate-y-4 group-hover:-translate-x-6 group-hover:-translate-y-6 transition-all duration-500 -z-10"></div>
+      <div id="hero-card" class="relative w-full aspect-square max-w-[380px] ml-auto group transition-transform duration-200 ease-out">
+        
+        <!-- Decorative high-end frames -->
+        <div class="absolute inset-0 border border-yellow-400/10 rounded-3xl translate-x-6 translate-y-6 group-hover:translate-x-4 group-hover:translate-y-4 transition-all duration-700"></div>
+        <div class="absolute -inset-4 bg-gradient-to-tr from-yellow-400/5 to-transparent rounded-[3rem] -z-10 blur-2xl"></div>
 
-        <!-- Image Container -->
-        <div class="relative w-full h-full rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-slate-950">
-          <img src="assets/brahim.png" alt="Ibrahim" class="w-full h-full object-cover object-top transition-all duration-700">
+        <!-- Main Image Box -->
+        <div class="relative w-full h-full rounded-3xl overflow-hidden border border-white/5 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] bg-slate-950">
+          <img src="assets/brahim.png" alt="Ibrahim" class="w-full h-full object-cover object-top transition-all duration-1000 group-hover:scale-110 grayscale-[10%] group-hover:grayscale-0">
           
-          <!-- Scan Line Animation -->
-          <div class="absolute top-0 left-0 w-full h-[2px] bg-yellow-400/50 shadow-[0_0_15px_#facc15] animate-scan z-20"></div>
-          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-60"></div>
+          <!-- Animated Scan Effect -->
+          <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-yellow-400/40 to-transparent animate-scan z-20"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80"></div>
           
-          <!-- Modern Glass Badge -->
-          <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[85%] bg-white/10 backdrop-blur-xl border border-white/10 p-3 rounded-2xl shadow-2xl z-20">
-            <div class="flex items-center justify-between gap-2">
-              <div class="flex items-center gap-2">
-                <div class="w-2 h-2 bg-green-500 rounded-full animate-ping"></div>
-                <span class="text-[10px] text-white font-bold uppercase tracking-widest whitespace-nowrap">Open to Work</span>
+          <!-- High-end Floating Badge -->
+          <div class="absolute bottom-6 left-6 right-6 bg-white/5 backdrop-blur-2xl border border-white/10 p-4 rounded-2xl shadow-2xl z-20 transform group-hover:-translate-y-2 transition-transform duration-500">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="relative">
+                    <div class="w-2.5 h-2.5 bg-green-500 rounded-full"></div>
+                    <div class="absolute inset-0 w-2.5 h-2.5 bg-green-500 rounded-full animate-ping"></div>
+                </div>
+                <span class="text-[10px] text-white font-bold uppercase tracking-[0.2em] whitespace-nowrap">Active Now</span>
               </div>
-              <span class="text-[10px] text-yellow-400 font-bold whitespace-nowrap">New Projects</span>
+              <div class="h-4 w-[1px] bg-white/10"></div>
+              <span class="text-[10px] text-yellow-400 font-bold uppercase tracking-widest">Available</span>
             </div>
           </div>
         </div>
@@ -116,7 +120,6 @@
         </div>
         <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-yellow-400/10 blur-2xl rounded-full"></div>
       </div>
-
       <div>
         <h3 class="text-yellow-200/80 font-semibold uppercase text-xs tracking-widest mb-4">Discovery</h3>
         <h2 class="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
@@ -136,7 +139,6 @@
       <h3 class="text-yellow-200/80 font-semibold uppercase text-xs tracking-widest mb-4">Expertise</h3>
       <h2 class="text-3xl md:text-4xl font-bold">Technical Skills</h2>
     </div>
-
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
       <!-- Skill Cards -->
       <div class="p-8 rounded-2xl bg-white/5 border border-white/5 hover:border-yellow-200/20 transition-all duration-300 group text-center">
@@ -146,7 +148,6 @@
         <h4 class="font-semibold text-slate-200">Frontend</h4>
         <p class="text-xs text-slate-500 mt-2">React, Tailwind, Vue</p>
       </div>
-
       <div class="p-8 rounded-2xl bg-white/5 border border-white/5 hover:border-yellow-200/20 transition-all duration-300 group text-center">
         <div class="w-12 h-12 bg-yellow-200/10 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 text-yellow-200">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14M5 12l4-4m-4 4l4 4"></path></svg>
@@ -154,7 +155,6 @@
         <h4 class="font-semibold text-slate-200">Backend</h4>
         <p class="text-xs text-slate-500 mt-2">Node.js, Python, Go</p>
       </div>
-
       <div class="p-8 rounded-2xl bg-white/5 border border-white/5 hover:border-yellow-200/20 transition-all duration-300 group text-center">
         <div class="w-12 h-12 bg-yellow-200/10 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 text-yellow-200">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"></path></svg>
@@ -162,7 +162,6 @@
         <h4 class="font-semibold text-slate-200">Database</h4>
         <p class="text-xs text-slate-500 mt-2">Postgres, MongoDB</p>
       </div>
-
       <div class="p-8 rounded-2xl bg-white/5 border border-white/5 hover:border-yellow-200/20 transition-all duration-300 group text-center">
         <div class="w-12 h-12 bg-yellow-200/10 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 text-yellow-200">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
@@ -182,7 +181,6 @@
       </div>
       <a href="#" class="text-yellow-200/60 hover:text-yellow-200 text-sm font-medium transition-colors border-b border-yellow-200/20 pb-1">View all projects</a>
     </div>
-
     <div class="grid md:grid-cols-2 gap-8">
       <!-- Project Card 1 -->
       <div class="group relative rounded-3xl overflow-hidden bg-white/5 border border-white/5 hover:border-yellow-200/20 transition-all duration-500">
@@ -204,7 +202,6 @@
           </a>
         </div>
       </div>
-
       <!-- Project Card 2 -->
       <div class="group relative rounded-3xl overflow-hidden bg-white/5 border border-white/5 hover:border-yellow-200/20 transition-all duration-500">
         <div class="aspect-video bg-slate-800 flex items-center justify-center text-slate-600 italic group-hover:scale-105 transition-transform duration-700">
@@ -232,13 +229,11 @@
   <section id="contact" class="py-24 px-6 max-w-4xl mx-auto">
     <div class="bg-gradient-to-br from-white/5 to-transparent border border-white/10 rounded-[2rem] p-12 text-center relative overflow-hidden">
       <div class="absolute top-0 right-0 w-64 h-64 bg-yellow-400/5 blur-[100px] rounded-full"></div>
-
       <h3 class="text-yellow-200/80 font-semibold uppercase text-xs tracking-widest mb-4">Get In Touch</h3>
       <h2 class="text-3xl md:text-5xl font-bold mb-8">Let's work together</h2>
       <p class="text-slate-400 text-lg mb-12 font-light max-w-xl mx-auto">
         Have a project in mind? Let's discuss how we can create something amazing together.
       </p>
-
       <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
         <a href="mailto:contact@ibrahim.com" class="px-10 py-4 bg-yellow-300 text-slate-900 font-bold rounded-full hover:bg-yellow-200 transition-all shadow-[0_0_20px_rgba(253,224,71,0.2)]">
           Say Hello
@@ -260,5 +255,5 @@
 
   <script src="script.js"></script>
 
-  </body>
-  </html>
+</body>
+</html>
