@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Smooth scroll for anchor links (optional but good for portfolios)
+  // Smooth scroll for anchor links
   navItems.forEach(item => {
     item.addEventListener('click', (e) => {
       const targetId = item.textContent.toLowerCase().trim();
@@ -29,4 +29,59 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Typing Animation Loop
+  const typingElement = document.getElementById('typing-name');
+  const name = 'Ibrahim';
+  let charIndex = 0;
+  let isDeleting = false;
+  let typeSpeed = 150;
+
+  function type() {
+    const currentText = name.substring(0, charIndex);
+    typingElement.textContent = currentText;
+
+    if (!isDeleting && charIndex < name.length) {
+      charIndex++;
+      typeSpeed = 150;
+    } else if (isDeleting && charIndex > 0) {
+      charIndex--;
+      typeSpeed = 75;
+    } else if (!isDeleting && charIndex === name.length) {
+      isDeleting = true;
+      typeSpeed = 2000; // Pause at the end
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      typeSpeed = 500; // Pause before starting again
+    }
+
+    setTimeout(type, typeSpeed);
+  }
+
+  // 3D Tilt Effect
+  const card = document.getElementById('hero-card');
+  const container = document.querySelector('.tilt-container');
+
+  if (card && container) {
+    container.addEventListener('mousemove', (e) => {
+      const rect = container.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      
+      const rotateX = (y - centerY) / 10;
+      const rotateY = (centerX - x) / 10;
+      
+      card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+
+    container.addEventListener('mouseleave', () => {
+      card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });
+  }
+
+  // Start typing
+  setTimeout(type, 500);
 });

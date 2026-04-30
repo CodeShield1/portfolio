@@ -1,0 +1,50 @@
+ @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+    .text-glow {
+      text-shadow: 0 0 10px rgba(250, 204, 21, 0.3);
+    }
+    
+    .cursor {
+      display: inline-block;
+      width: 3px;
+      background-color: #facc15;
+      margin-left: 5px;
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+      from, to { background-color: transparent; }
+      50% { background-color: #facc15; }
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    @keyframes scan {
+      0% { top: 0; opacity: 0; }
+      5% { opacity: 1; }
+      95% { opacity: 1; }
+      100% { top: 100%; opacity: 0; }
+    }
+    .animate-scan {
+      animation: scan 4s linear infinite;
+    }
+
+    .tilt-container {
+      perspective: 1000px;
+    }
+
+    #hero-card {
+      transform-style: preserve-3d;
+    }
+
+    #hero-card:hover {
+      box-shadow: 0 45px 100px rgba(0,0,0,0.5);
+    }
