@@ -23,6 +23,34 @@
       .container-custom { max-width: 1320px; }
     }
 
+    /* --- Small Laptop Optimization (e.g., 13" 1366px) --- */
+    @media (max-width: 1366px) and (min-width: 1024px) {
+      html {
+        font-size: 15px; /* Slight reduction in base size to de-zoom */
+      }
+      
+      .container-custom {
+        max-width: 1080px;
+      }
+
+      section {
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important;
+      }
+
+      #hero-card {
+        max-width: 380px !important;
+      }
+
+      .hero-reveal h1 {
+        font-size: 4rem !important;
+      }
+      
+      .hero-reveal p {
+        margin-bottom: 2rem !important;
+      }
+    }
+
     /* Scaling for Ultra-Large Screens */
     @media (min-width: 1800px) {
       html { font-size: 19px; }
