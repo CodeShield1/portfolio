@@ -1,4 +1,83 @@
- @keyframes float {
+    /* --- Responsive Containers & Breakpoints --- */
+    .container-custom {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .container-custom { max-width: 720px; }
+    }
+
+    @media (min-width: 992px) {
+      .container-custom { max-width: 960px; }
+    }
+
+    @media (min-width: 1200px) {
+      .container-custom { max-width: 1140px; }
+    }
+
+    @media (min-width: 1400px) {
+      .container-custom { max-width: 1320px; }
+    }
+
+    /* Scaling for Ultra-Large Screens */
+    @media (min-width: 1800px) {
+      html { font-size: 19px; }
+      .container-custom { max-width: 1600px; }
+      #hero-card { max-width: 600px !important; }
+    }
+
+    @media (min-width: 2400px) {
+      html { font-size: 22px; }
+      .container-custom { max-width: 2000px; }
+      #hero-card { max-width: 800px !important; }
+    }
+
+    /* Mobile & Tablet Adjustments */
+    @media (max-width: 767px) {
+      nav {
+        top: 1.25rem !important; 
+        width: 92% !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+      }
+      
+      main {
+        padding-top: 10rem !important;
+      }
+
+      section {
+        padding-top: 6rem !important;
+        padding-bottom: 6rem !important;
+      }
+
+      .hero-reveal h1 {
+        font-size: 3rem !important;
+        line-height: 1.1;
+      }
+
+      .hero-reveal h3 {
+        font-size: 0.9rem !important;
+        letter-spacing: 0.15em !important;
+      }
+
+      p {
+        font-size: 1rem !important;
+        line-height: 1.7;
+      }
+    }
+
+    @media (max-width: 480px) {
+      main { padding-top: 9rem !important; }
+      #nav { gap: 0.5rem !important; }
+      #nav li { font-size: 10px !important; }
+      .hero-reveal h1 { font-size: 2.5rem !important; }
+    }
+
+    @keyframes float {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
     }
@@ -25,6 +104,8 @@
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
       scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     @keyframes scan {

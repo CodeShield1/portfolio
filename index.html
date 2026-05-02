@@ -51,7 +51,7 @@
   </button>
 
   <!-- Hero Section -->
-  <main class="relative flex flex-col lg:flex-row items-center justify-between min-h-screen px-6 lg:px-24 pt-48 lg:pt-12 max-w-7xl mx-auto overflow-x-hidden overflow-y-visible">
+  <main class="relative flex flex-col lg:flex-row items-center justify-between min-h-screen pt-48 lg:pt-12 container-custom mx-auto overflow-x-hidden overflow-y-visible">
     
      <!-- Mobile Background Image (Only on Mobile) -->
     <div class="absolute inset-0 lg:hidden z-0 pointer-events-none opacity-60">
@@ -88,7 +88,7 @@
 
      <!-- Desktop Image Container (Right side) -->
     <div class="hidden lg:block flex-1 relative mt-20 lg:mt-10 tilt-container order-2">
-      <div id="hero-card" class="relative w-full aspect-square max-w-[400px] ml-auto group transition-transform duration-200 ease-out mystical-glow">
+      <div id="hero-card" class="relative w-full aspect-square max-w-md ml-auto group transition-transform duration-200 ease-out mystical-glow">
         
         <!-- Floating Geometric Decorations -->
         <div class="absolute -top-8 -right-8 w-16 h-16 border border-yellow-400/20 rounded-full animate-float" style="animation-delay: 0s;"></div>
@@ -139,7 +139,7 @@
   </main>
 
   <!-- About Section -->
-  <section id="about" class="py-24 px-6 max-w-5xl mx-auto">
+  <section id="about" class="py-24 container-custom mx-auto">
     <div class="grid md:grid-cols-2 gap-12 items-center">
       <div class="relative">
         <div class="aspect-square rounded-2xl bg-gradient-to-br from-yellow-200/20 to-transparent border border-white/10 overflow-hidden relative group">
@@ -165,7 +165,7 @@
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="py-24 px-6 max-w-6xl mx-auto">
+  <section id="skills" class="py-24 container-custom mx-auto">
     <div class="text-center mb-16">
       <h3 class="text-yellow-200/80 font-semibold uppercase text-xs tracking-widest mb-4">Expertise</h3>
       <h2 class="text-3xl md:text-4xl font-bold">Technical Skills</h2>
@@ -204,7 +204,7 @@
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="py-24 px-6 max-w-6xl mx-auto">
+  <section id="projects" class="py-24 container-custom mx-auto">
     <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
       <div>
         <h3 class="text-yellow-200/80 font-semibold uppercase text-xs tracking-widest mb-4">Portfolio</h3>
@@ -257,7 +257,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-24 px-6 max-w-4xl mx-auto">
+  <section id="contact" class="py-24 container-custom mx-auto">
     <div class="bg-gradient-to-br from-white/5 to-transparent border border-white/10 rounded-[2rem] p-12 text-center relative overflow-hidden">
       <div class="absolute top-0 right-0 w-64 h-64 bg-yellow-400/5 blur-[100px] rounded-full"></div>
       <h3 class="text-yellow-200/80 font-semibold uppercase text-xs tracking-widest mb-4">Get In Touch</h3>
@@ -276,6 +276,7 @@
       </div>
     </div>
   </section>
+
 
   <!-- Footer -->
   <footer class="py-12 border-t border-white/5 text-center">
