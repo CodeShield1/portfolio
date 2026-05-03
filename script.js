@@ -1,34 +1,58 @@
 document.addEventListener('DOMContentLoaded', () => {
   const navItems = document.querySelectorAll('.nav-item');
+  const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
 
-  // Handle active state on click
-  navItems.forEach(item => {
-    item.addEventListener('click', () => {
-      // Remove active class from all items
-      navItems.forEach(i => {
-        i.classList.remove('text-yellow-400');
-        i.classList.add('text-slate-300');
-      });
-
-      // Add active class to clicked item
-      item.classList.add('text-yellow-400');
-      item.classList.remove('text-slate-300');
+  // Mobile Menu Toggle
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('active');
+      hamburgerIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+      document.body.classList.toggle('overflow-hidden');
     });
-  });
+  }
 
-  // Smooth scroll for anchor links
-  navItems.forEach(item => {
-    item.addEventListener('click', (e) => {
-      const targetId = item.textContent.toLowerCase().trim();
-      const targetSection = document.getElementById(targetId);
-      
-      if (targetSection) {
-        targetSection.scrollIntoView({
-          behavior: 'smooth'
+  // Handle active state and smooth scroll
+  function handleNavClick(items) {
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        // Remove active class from all items
+        items.forEach(i => {
+          i.classList.remove('text-yellow-400');
+          i.classList.add('text-slate-300');
         });
-      }
+
+        // Add active class to clicked item
+        item.classList.add('text-yellow-400');
+        item.classList.remove('text-slate-300');
+
+        // Close mobile menu if open
+        if (mobileMenu && mobileMenu.classList.contains('active')) {
+          mobileMenu.classList.remove('active');
+          hamburgerIcon.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }
+
+        // Smooth scroll
+        const targetId = item.textContent.toLowerCase().trim();
+        const targetSection = document.getElementById(targetId);
+        
+        if (targetSection) {
+          targetSection.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
     });
-  });
+  }
+
+  handleNavClick(navItems);
+  handleNavClick(mobileNavItems);
 
   // Typing Animation Loop
   const typingElement = document.getElementById('typing-name');
@@ -38,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let typeSpeed = 150;
 
   function type() {
+    if (!typingElement) return;
     const currentText = name.substring(0, charIndex);
     typingElement.textContent = currentText;
 

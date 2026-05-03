@@ -31,58 +31,87 @@
     <div class="magic-particle" style="left: 90%; animation-delay: 4s;"></div>
   </div>
 
-  <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50
-              backdrop-blur-2xl bg-white/5 border border-yellow-400/50 
-              rounded-full px-8 md:px-12 py-3 md:py-2.5 shadow-2xl flex items-center justify-center">
-    <ul id="nav" class="flex items-center gap-6 md:gap-12 text-slate-300 text-[11px] md:text-sm font-medium relative">
-      <li class="nav-item cursor-pointer hover:text-yellow-400 transition-all duration-300">Home</li>
-      <li class="nav-item cursor-pointer hover:text-yellow-400 transition-all duration-300">About</li>
-      <li class="nav-item cursor-pointer hover:text-yellow-400 transition-all duration-300">Skills</li>
-      <li class="nav-item cursor-pointer hover:text-yellow-400 transition-all duration-300">Projects</li>
-      <li class="nav-item cursor-pointer hover:text-yellow-400 transition-all duration-300">Contact</li>
-    </ul>
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 w-full z-50 px-6 py-6 flex items-center justify-between">
+    <div class="text-yellow-400 font-bold text-2xl tracking-tighter cursor-pointer">&lt;/&gt;</div>
+    
+    <!-- Desktop Nav -->
+    <div class="hidden md:flex items-center backdrop-blur-2xl bg-white/5 border border-yellow-400/30 rounded-full px-10 py-2.5 shadow-2xl">
+      <ul id="nav" class="flex items-center gap-10 text-slate-300 text-sm font-medium">
+        <li class="nav-item cursor-pointer hover:text-yellow-400 transition-all duration-300">Home</li>
+        <li class="nav-item cursor-pointer hover:text-yellow-400 transition-all duration-300">About</li>
+        <li class="nav-item cursor-pointer hover:text-yellow-400 transition-all duration-300">Skills</li>
+        <li class="nav-item cursor-pointer hover:text-yellow-400 transition-all duration-300">Projects</li>
+        <li class="nav-item cursor-pointer hover:text-yellow-400 transition-all duration-300">Contact</li>
+      </ul>
+    </div>
+
+    <!-- Mobile Hamburger -->
+    <button id="mobile-menu-btn" class="md:hidden text-yellow-400 focus:outline-none">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+
+    <!-- Download CV (Desktop Only) -->
+    <button class="hidden lg:flex items-center gap-2 px-6 py-2.5 rounded-full bg-white/5 text-yellow-200/80 backdrop-blur-md border border-yellow-200/20 text-xs font-bold uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-xl">
+      <span>Download CV</span>
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+    </button>
   </nav>
 
-  <!-- Responsive Download CV Button -->
-  <button class="fixed bottom-8 right-6 lg:top-6 lg:right-8 lg:bottom-auto z-50 flex items-center gap-2 px-6 py-3.5 lg:py-2.5 rounded-full bg-yellow-400 lg:bg-white/5 text-slate-900 lg:text-yellow-200/80 backdrop-blur-md border border-yellow-200/20 text-xs font-bold uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(253,224,71,0.3)] lg:shadow-xl">
-    <span class="hidden sm:inline">Download CV</span>
-    <span class="sm:hidden">CV</span>
-    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-  </button>
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-40 bg-slate-950/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8 transition-all duration-500 translate-x-full md:hidden">
+    <ul class="flex flex-col items-center gap-8 text-slate-200 text-2xl font-medium">
+      <li class="mobile-nav-item cursor-pointer hover:text-yellow-400 transition-all duration-300">Home</li>
+      <li class="mobile-nav-item cursor-pointer hover:text-yellow-400 transition-all duration-300">About</li>
+      <li class="mobile-nav-item cursor-pointer hover:text-yellow-400 transition-all duration-300">Skills</li>
+      <li class="mobile-nav-item cursor-pointer hover:text-yellow-400 transition-all duration-300">Projects</li>
+      <li class="mobile-nav-item cursor-pointer hover:text-yellow-400 transition-all duration-300">Contact</li>
+    </ul>
+    <button class="mt-4 px-8 py-3 rounded-full bg-yellow-400 text-slate-950 font-bold uppercase text-sm tracking-widest">Download CV</button>
+  </div>
 
   <!-- Hero Section -->
-  <main class="relative flex flex-col lg:flex-row items-center justify-between min-h-screen pt-48 lg:pt-12 container-custom mx-auto overflow-x-hidden overflow-y-visible">
+  <main class="relative flex flex-col lg:flex-row items-center justify-between min-h-screen pt-20 lg:pt-12 container-custom mx-auto overflow-x-hidden">
     
-     <!-- Mobile Background Image (Only on Mobile) -->
-    <div class="absolute inset-0 lg:hidden z-0 pointer-events-none opacity-60">
-        <img src="assets/brahim.png" alt="" class="absolute inset-0 w-full h-full object-cover object-top scale-110 animate-cross-fade z-10">
-        <img src="assets/brahim2.png" alt="" class="absolute inset-0 w-full h-full object-cover object-top scale-110 z-0">
-        <div class="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/20 to-slate-950/80 z-20"></div>
+     <!-- Mobile Background Image -->
+    <div class="absolute inset-0 lg:hidden z-0 pointer-events-none">
+        <img src="assets/brahim.png" alt="" class="absolute inset-0 w-full h-full object-cover object-top scale-105 animate-cross-fade z-10">
+        <img src="assets/brahim2.png" alt="" class="absolute inset-0 w-full h-full object-cover object-top scale-105 z-0">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-slate-950/20 to-slate-950 z-20"></div>
     </div>
 
      <!-- Text Content -->
-    <div class="relative flex-1 text-center lg:text-left z-10 order-1 lg:max-w-2xl">
+    <div class="relative px-6 lg:px-0 mt-auto lg:mt-0 pb-12 lg:pb-0 text-left z-10 order-1 lg:max-w-2xl w-full">
        
-      <h2 class="text-slate-100 text-lg md:text-xl font-light mb-2 hero-reveal hero-reveal-delay-1">Hello, I'm</h2>
-      <h1 class="text-4xl md:text-7xl font-bold mb-4 tracking-tight leading-tight hero-reveal hero-reveal-delay-2">
-        <span id="typing-name" class="gradient-text text-glow-pro"></span><span class="cursor text-yellow-400/50">|</span>
+      <h2 class="text-slate-200 text-base md:text-xl font-light mb-1 hero-reveal hero-reveal-delay-1">Hello, I'm</h2>
+      <h1 class="text-5xl md:text-7xl font-bold mb-3 tracking-tight leading-tight hero-reveal hero-reveal-delay-2">
+        <span id="typing-name" class="text-yellow-400"></span><span class="cursor text-yellow-400/50">|</span>
       </h1>
-      <h3 class="text-slate-400 text-base md:text-lg font-medium tracking-[0.3em] uppercase mb-10 opacity-80 hero-reveal hero-reveal-delay-3">Full Stack Developer</h3>
+      <h3 class="text-slate-300 text-[10px] md:text-lg font-medium tracking-[0.4em] uppercase mb-8 opacity-90 hero-reveal hero-reveal-delay-3">Full Stack Developer</h3>
 
-      <div class="w-12 h-0.5 bg-yellow-400/50 mb-10 mx-auto lg:mx-0 hero-reveal hero-reveal-delay-3"></div>
-
-      <p class="text-slate-400 text-sm md:text-lg max-w-lg mb-12 leading-relaxed font-light mx-auto lg:mx-0 hero-reveal hero-reveal-delay-4">
+      <p class="text-slate-400 text-sm md:text-lg max-w-lg mb-10 leading-relaxed font-light hero-reveal hero-reveal-delay-4">
         I build fast, scalable, and user-friendly web applications using modern technologies. Turning ideas into <span class="text-slate-200 font-normal">impactful digital experiences</span>.
       </p>
 
-      <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start hero-reveal hero-reveal-delay-5">
-        <button class="px-8 py-3.5 bg-yellow-400 hover:bg-yellow-500 text-slate-950 text-sm font-bold rounded-full transition-all duration-300 shadow-[0_10px_30px_rgba(253,224,71,0.15)] flex items-center justify-center gap-2 group">
+      <div class="flex flex-col sm:flex-row gap-4 justify-start hero-reveal hero-reveal-delay-5">
+        <button class="w-full sm:w-auto px-8 py-3.5 bg-yellow-400 hover:bg-yellow-500 text-slate-950 text-sm font-bold rounded-full transition-all duration-300 flex items-center justify-center gap-2 group">
           View Work
           <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
         </button>
-        <button class="px-8 py-3.5 bg-white/5 border border-white/10 hover:border-yellow-400/50 text-white text-sm font-bold rounded-full transition-all duration-300 backdrop-blur-sm">
+        <button class="w-full sm:w-auto px-8 py-3.5 bg-white/5 border border-white/10 hover:border-yellow-400/50 text-white text-sm font-bold rounded-full transition-all duration-300 backdrop-blur-sm">
           Contact Me
         </button>
+      </div>
+
+      <!-- Available for Work Badge (Mobile) -->
+      <div class="mt-10 flex justify-center lg:hidden">
+        <div class="inline-flex items-center gap-3 bg-slate-900/60 backdrop-blur-md border border-white/10 px-5 py-2 rounded-full hero-reveal hero-reveal-delay-5">
+            <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_10px_#22c55e]"></div>
+            <span class="text-[9px] text-white font-bold uppercase tracking-[0.2em]">Available for work</span>
+        </div>
       </div>
     </div>
 
@@ -144,10 +173,7 @@
       <div class="relative">
         <div class="aspect-square rounded-2xl bg-gradient-to-br from-yellow-200/20 to-transparent border border-white/10 overflow-hidden relative group">
           <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(253,224,71,0.1)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-          <!-- Placeholder for Profile Image -->
-          <div class="w-full h-full flex items-center justify-center text-slate-500 italic">
-            [ Profile Image ]
-          </div>
+          <img src="assets/brahim2.png" alt="Ibrahim" class="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-500">
         </div>
         <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-yellow-400/10 blur-2xl rounded-full"></div>
       </div>
