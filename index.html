@@ -32,11 +32,12 @@
   </div>
 
   <!-- Navigation -->
-  <nav class="fixed top-0 left-0 w-full z-50 px-6 py-6 flex items-center justify-between">
-    <div class="text-yellow-400 font-bold text-2xl tracking-tighter cursor-pointer">&lt;/&gt;</div>
+  <nav class="fixed top-0 left-0 w-full z-50 px-6 py-6 flex items-center justify-between md:grid md:grid-cols-3">
+    <!-- Logo -->
+    <div class="text-yellow-400 font-bold text-2xl tracking-tighter cursor-pointer justify-self-start">&lt;/&gt;</div>
     
-    <!-- Desktop Nav -->
-    <div class="hidden md:flex items-center backdrop-blur-2xl bg-white/5 border border-yellow-400/30 rounded-full px-10 py-2.5 shadow-2xl">
+    <!-- Desktop Nav (Centered) -->
+    <div class="hidden md:flex items-center justify-self-center backdrop-blur-2xl bg-white/5 border border-yellow-400/30 rounded-full px-10 py-2.5 shadow-2xl">
       <ul id="nav" class="flex items-center gap-10 text-slate-300 text-sm font-medium">
         <li class="nav-item cursor-pointer hover:text-yellow-400 transition-all duration-300">Home</li>
         <li class="nav-item cursor-pointer hover:text-yellow-400 transition-all duration-300">About</li>
@@ -46,19 +47,22 @@
       </ul>
     </div>
 
-    <!-- Mobile Hamburger -->
-    <button id="mobile-menu-btn" class="md:hidden text-yellow-400 focus:outline-none">
-      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-      </svg>
-    </button>
+    <!-- Right Side (Hamburger / Button) -->
+    <div class="flex items-center justify-self-end">
+      <!-- Mobile Hamburger -->
+      <button id="mobile-menu-btn" class="md:hidden text-yellow-400 focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
 
-    <!-- Download CV (Desktop Only) -->
-    <button class="hidden lg:flex items-center gap-2 px-6 py-2.5 rounded-full bg-white/5 text-yellow-200/80 backdrop-blur-md border border-yellow-200/20 text-xs font-bold uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-xl">
-      <span>Download CV</span>
-      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
-    </button>
+      <!-- Download CV (Desktop Only) -->
+      <button class="hidden lg:flex items-center gap-2 px-6 py-2.5 rounded-full bg-white/5 text-yellow-200/80 backdrop-blur-md border border-yellow-200/20 text-xs font-bold uppercase tracking-wider hover:scale-105 transition-all duration-300 shadow-xl">
+        <span>Download CV</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+      </button>
+    </div>
   </nav>
 
   <!-- Mobile Menu Overlay -->
@@ -77,7 +81,7 @@
   <main class="relative flex flex-col lg:flex-row items-center justify-between min-h-screen pt-20 lg:pt-12 container-custom mx-auto overflow-x-hidden">
     
      <!-- Mobile Background Image -->
-    <div class="absolute inset-0 lg:hidden z-0 pointer-events-none">
+    <div class="absolute inset-0 lg:hidden z-0 pointer-events-none opacity-30">
         <img src="assets/brahim.png" alt="" class="absolute inset-0 w-full h-full object-cover object-top scale-105 animate-cross-fade z-10">
         <img src="assets/brahim2.png" alt="" class="absolute inset-0 w-full h-full object-cover object-top scale-105 z-0">
         <div class="absolute inset-0 bg-gradient-to-b from-transparent via-slate-950/20 to-slate-950 z-20"></div>
